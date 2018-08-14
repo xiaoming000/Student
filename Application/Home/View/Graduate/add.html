@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+<title>编辑毕业生信息</title>
+<link href="<?php echo CSS_URL ?>function.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="<?php echo JS_URL ?>function.js"></script>
+<style>
+div{width:1001px;margin:100px auto;}
+table {border-collapse:collapse;  }
+input{width:97%;height:35px;border:0px;padding-left:5px;}
+select{height:35px;width:90%;border:0px;}
+
+</style>
+<script>
+window.onload = function(){
+	function getDate(){
+	debugger;
+	var today = new Date(); 
+	var date; 
+	date = (today.getFullYear()) +"-" + (today.getMonth() + 1 ) + "-" + today.getDate(); 
+	return date;
+	}
+	window.setInterval(function(){
+	document.getElementById("time").value=getDate();
+	}, 100);
+}
+</script>
+</head>
+<body >
+<div class="main" align="center">
+<form action="__SELF__" method="post">
+
+<table width="500" border="1" cellspacing="0" cellpadding="0" bgcolor="b5d6e6">
+  <tr align="center" >
+      <td width="15%" height="35">姓名</td>
+      <td width="" bgcolor="#FFFFFF" ><input type="text" name="s_name" value="" /></td>
+   <td width="17%">学号</td>
+      <td width="" ><input type="text" name="s_number" value=""/></td>
+  </tr>
+  <tr align="center" >
+      <td height="35" >性别</td>
+      <td  bgcolor="#FFFFFF" ><select name="sex" class="padding">
+        	<option value="" select="select" style="height:35px;width:100%;"></option>
+        	<option value="男">男</option>
+            <option value="女">女</option>
+                       </select></td>
+      <td >班级</td>
+      <td ><input type="text" name="class" value=""/></td>
+  </tr>
+  <tr align="center" >
+      <td>手机号码</td>
+      <td><input type="text" name="phone" value=""/></td>
+      <td height="35">QQ号</td>
+      <td bgcolor="#FFFFFF"><input type="text" name="qq" value=""/></td>
+  </tr>
+  <tr align="center" >
+      <td height="35">职务</td>
+      <td bgcolor="#FFFFFF" ><input type="text" name="work_post" value=""/></td>
+      <td height="35">更新时间</td>
+      <td bgcolor="#FFFFFF"><input type="text" id="time" name="time" value=""/></td>
+  </tr>
+  <tr align="center" >
+      <td height="35">就业单位</td>
+      <td bgcolor="#FFFFFF"><input type="text" name="work_unit" value=""/></td>
+      <td>单位性质</td>
+      <td bgcolor="#FFFFFF">
+          <select name="work_type" >
+              <option value="机关" select="select"></option>
+              <option value="机关">机关</option>
+                <option value="科研设计单位">科研设计单位</option>
+                <option value="高等教育单位">高等教育单位</option>
+                <option value="中初教育单位">中初教育单位</option>
+                <option value="医疗卫生单位">医疗卫生单位</option>
+                <option value="其他事业单位">其他事业单位</option>
+                <option value="国有企业">国有企业</option>
+                <option value="三资企业">三资企业</option>
+                <option value="部队">部队</option>
+                <option value="农村建制村">农村建制村</option>
+                <option value="城镇社区">城镇社区</option>
+          </select>
+       </td>
+  </tr>
+  <tr align="center" >
+ </tr>
+</table>
+ <p align="center" style="margin:10px;">
+        <input type="submit" name="submit" style="width:80px;height:35px;font-size:18px;background:#b5d6e6;"  value="确认"/>&ensp;&ensp;
+        <input type="button" name="reset" style="width:80px;height:35px;font-size:18px;background:#b5d6e6;" onclick="history.go(-1)" value="返回"/> 
+</p>
+    
+</form>
+</div>
+ <div>
+   <br/>
+   <br/>
+   <font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*班级:本科以A开头，专科以B开头</font><br/>
+   <font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*更新时间:默认为当前时间</font><br/>
+ </div>
+</body>
+</html>
+
+

@@ -1,0 +1,60 @@
+[ 2017-11-17T08:03:38+08:00 ] 127.0.0.1 /Student/index.php/Home/Banji/search
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `class` WHERE `class` IN () LIMIT 1  
+
+[ 2017-11-17T08:05:07+08:00 ] 127.0.0.1 /Student/index.php/Home/Banji/search
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `class` WHERE `class` IN () LIMIT 1  
+
+[ 2017-11-17T09:11:01+08:00 ] 127.0.0.1 /Student/index.php/Home/Fangyuan/out
+ERR: Think\Controller:expUser方法不存在！
+
+[ 2017-11-17T09:43:29+08:00 ] 127.0.0.1 /Student/index.php/Home/Sushe/in
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `fangyuan` WHERE ( building=1 and bnumber= ) 
+
+[ 2017-11-17T09:50:00+08:00 ] 127.0.0.1 /Student/index.php/Home/Sushe/in
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `fangyuan` WHERE ( building=1 and bnumber= ) 
+
+[ 2017-11-17T15:58:27+08:00 ] 127.0.0.1 /Student/index.php/Home/Sushe/in
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `fangyuan` WHERE ( building=1 and bnumber= ) 
+
+[ 2017-11-17T17:02:57+08:00 ] 127.0.0.1 /Student/index.php/Home/Admin/ajax.js
+ERR: 非法操作:ajax.js
+
+[ 2017-11-17T17:02:59+08:00 ] 127.0.0.1 /Student/index.php/Home/Admin/ajax.js
+ERR: 非法操作:ajax.js
+
+[ 2017-11-17T17:03:01+08:00 ] 127.0.0.1 /Student/index.php/Home/Admin/ajax.js
+ERR: 非法操作:ajax.js
+
+[ 2017-11-17T17:03:02+08:00 ] 127.0.0.1 /Student/index.php/Home/Admin/ajax.js
+ERR: 非法操作:ajax.js
+
+[ 2017-11-17T17:03:06+08:00 ] 127.0.0.1 /Student/index.php/Home/Admin/ajax.js
+ERR: 非法操作:ajax.js
+
+[ 2017-11-17T17:03:11+08:00 ] 127.0.0.1 /Student/index.php/Home/Admin/ajax.js
+ERR: 非法操作:ajax.js
+
+[ 2017-11-17T17:03:12+08:00 ] 127.0.0.1 /Student/index.php/Home/Admin/ajax.js
+ERR: 非法操作:ajax.js
+
+[ 2017-11-17T17:03:14+08:00 ] 127.0.0.1 /Student/index.php/Home/Admin/ajax.js
+ERR: 非法操作:ajax.js
+
+[ 2017-11-17T17:48:25+08:00 ] 127.0.0.1 /Student/index.php/Home/Fangyuan/edit/id/1
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `id` = 1' at line 1
+ [ SQL语句 ] : UPDATE `fangyuan` SET  WHERE `id` = 1
+
+[ 2017-11-17T19:20:34+08:00 ] 127.0.0.1 /Student/index.php/Home/Fangyuan/out
+ERR: Think\Controller:expUser方法不存在！
+
+[ 2017-11-17T19:20:37+08:00 ] 127.0.0.1 /Student/index.php/Home/Fangyuan/out
+ERR: Think\Controller:expUser方法不存在！
+
+[ 2017-11-17T19:21:21+08:00 ] 127.0.0.1 /Student/index.php/Home/Fangyuan/out
+ERR: Think\Controller:expUser方法不存在！
+

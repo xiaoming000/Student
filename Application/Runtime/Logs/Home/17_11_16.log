@@ -1,0 +1,8 @@
+[ 2017-11-16T19:23:37+08:00 ] 127.0.0.1 /Student/index.php/Home/Banji/add
+ERR: 1062:Duplicate entry 'A1641' for key 'PRIMARY'
+ [ SQL语句 ] : INSERT INTO `class` (`class`,`name`,`professional`,`class_tutor_tel`,`monitor`,`number`,`league_secretary`,`password`,`qqq`,`power`,`monitor_tel`) VALUES ('A1641','酒桶','应用物理学','12345678901','孙四','201508','寒冰','123456','232313','','12345678901')
+
+[ 2017-11-16T21:49:19+08:00 ] 127.0.0.1 /Student/index.php/Home/Admin/search
+ERR: 1054:Unknown column 'Array' in 'where clause'
+ [ SQL语句 ] : select * from class where Array 
+

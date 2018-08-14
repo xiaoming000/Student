@@ -1,0 +1,34 @@
+[ 2017-11-18T11:33:29+08:00 ] 127.0.0.1 /Student/index.php/Home/Graduate/search?year=2015&class=A1521&work_type=&s_number=
+ERR: 模板不存在:./Application/Home/View/Graduate/class2.html
+
+[ 2017-11-18T11:33:52+08:00 ] 127.0.0.1 /Student/index.php/Home/Graduate/search?year=2015&class=A1521&work_type=&s_number=
+ERR: 模板不存在:./Application/Home/View/Graduate/graduate.html
+
+[ 2017-11-18T14:46:54+08:00 ] 127.0.0.1 /Student/index.php/Home/guraduate/biyesheng.html
+ERR: 无法加载控制器:Guraduate
+
+[ 2017-11-18T16:40:54+08:00 ] 127.0.0.1 /Student/index.php/Home/Admin/teacher
+ERR: 1054:Unknown column 'id' in 'field list'
+ [ SQL语句 ] : SELECT `id`,`number`,`name`,`password`,`power` FROM `class` LIMIT 0,3  
+
+[ 2017-11-18T17:07:59+08:00 ] 127.0.0.1 /Student/index.php/Home/Admin/ajax.js
+ERR: 非法操作:ajax.js
+
+[ 2017-11-18T17:12:10+08:00 ] 127.0.0.1 /Student/index.php/Home/Admin/edit_teacher/id/A1421
+ERR: 参数错误或者未定义:class
+
+[ 2017-11-18T18:24:19+08:00 ] 127.0.0.1 /Student/index.php/Home/Admin/search
+ERR: 模板不存在:./Application/Home/View/Admin/search.html
+
+[ 2017-11-18T18:24:26+08:00 ] 127.0.0.1 /Student/index.php/Home/Admin/search
+ERR: 模板不存在:./Application/Home/View/Admin/search.html
+
+[ 2017-11-18T18:32:54+08:00 ] 127.0.0.1 /Student/index.php/Home/Admin/search
+ERR: 模板不存在:./Application/Home/View/Admin/search.html
+
+[ 2017-11-18T19:11:10+08:00 ] 127.0.0.1 /Student/index.php/Home/Admin/ajax.js
+ERR: 非法操作:ajax.js
+
+[ 2017-11-18T19:11:15+08:00 ] 127.0.0.1 /Student/index.php/Home/Admin/ajax.js
+ERR: 非法操作:ajax.js
+

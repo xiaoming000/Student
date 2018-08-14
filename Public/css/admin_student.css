@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+
+ body,td,th {
+	font-size: 15px;
+}
+
+table, td{
+	font:100% Arial, Helvetica, sans-serif; 
+}
+table,th, td{text-align:center;padding:0 0 0 0;}
+th{background:#328aa4  repeat-x;color:#fff;}
+
+table{
+border:1px solid #E8F5FD;
+border-collapse: collapse;
+}
+td{
+border:1px  solid #FFF;
+border-collapse: collapse;
+height:34px;
+ }
+.my_ziti {
+	font-size: 18px;
+}
+@media print{
+.Noprint{display:none;}
+.Print{display:block;} 
+.PageNext{page-break-after: always;}
+}
+td{
+
+padding-top:0px;padding-left:0px;padding-bottom:0px;padding-right:0px;
+margin-top:0px;margin-left:0px;margin-bottom:0px;margin-right:0px;
+
+	}
+textarea,input{border:none;
+	 padding-top:0px;padding-left:0px;padding-bottom:0px;padding-right:0px;
+margin-top:0px;margin-left:0px;margin-bottom:0px;margin-right:0px;
+}

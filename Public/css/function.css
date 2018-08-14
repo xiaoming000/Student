@@ -1,0 +1,65 @@
+a:link,a:hover,a:visited{text-decoration:none;color:#000000;}
+.button a:link,.button a:visited{text-decoration:none;color:#ffffff;}
+.query a:link,.query a:visited{text-decoration:none;color:#ffffff;}
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color:#e9f7fc;
+}
+
+body .button{height:40px;font-size:20px;font-weight:100;color:#FFFFFF;	float:left;	}	
+body .button .tianjia{
+	font-size:16px;
+	height:22px;
+	width:64px;
+	margin:5px 12px;
+	padding:3px 13px;
+	background-image:url(../img/table/button.jpg);
+
+	}
+body .button .del{
+	font-size:16px;
+	height:22px;
+	width:82px;
+	margin:5px 15px;
+	padding:3px 4px;
+	background-image:url(../img/table/button.jpg);
+
+	}	
+	
+.list-page{padding:20px 0;text-align:center;}
+.list-page a{margin:0 5px;padding:2px 7px;border:1px solid #ccc;background:#f3f3f3;}
+.list-page a:hover{background:#e4e4e4;border:1px solid #908f8f;}
+.list-page .current{margin:0 5px;padding:2px 7px;background:#f60;border:1px solid #fe8101;color:#fff;}
+
+.query .table{
+border:1px solid #fff;
+border-collapse: collapse;
+margin:5px;
+float:right;
+}
+.query .th{background:#328aa4  repeat-x;color:#FFF;font-size:15px}
+
+.query .td{
+	border:1px solid #FFF;
+border-collapse: collapse;
+padding-top:0px;padding-left:0px;padding-bottom:0px;padding-right:0px;
+margin-top:0px;margin-left:0px;margin-bottom:0px;margin-right:0px;
+	}
+.query .input{border:1px solid #AA9FAA;
+	 padding-top:0px;padding-left:0px;padding-bottom:0px;padding-right:0px;
+margin-top:0px;margin-left:0px;margin-bottom:0px;margin-right:0px;width:80px;height:25px;
+}
+.query .select{border:none;border-top:0px;border-left:0px;border-bottom:0px;border-right:0px;
+	 padding-top:0px;padding-left:0px;padding-bottom:0px;padding-right:0px;
+margin-top:0px;margin-left:0px;margin-bottom:0px;margin-right:0px;width:90px;height:25px;text-align:center;}
+.query .select1{border:none;border-top:0px;border-left:0px;border-bottom:0px;border-right:0px;
+	 padding-top:0px;padding-left:0px;padding-bottom:0px;padding-right:0px;
+margin-top:0px;margin-left:0px;margin-bottom:0px;margin-right:0px;width:40px;height:25px;}
+.query .select2{border:none;border-top:0px;border-left:0px;border-bottom:0px;border-right:0px;
+	 padding-top:0px;padding-left:0px;padding-bottom:0px;padding-right:0px;
+margin-top:0px;margin-left:0px;margin-bottom:0px;margin-right:0px;width:70px;height:25px;text-align:center;}
+

@@ -1,0 +1,32 @@
+[ 2017-11-12T11:43:24+08:00 ] 127.0.0.1 /Student/index.php/Home/Zaixiaosheng/impUser.html
+ERR: 1048:Column 'political_status' cannot be null
+ [ SQL语句 ] : INSERT INTO `student` (`class`,`number`,`name`,`sex`,`id_number`,`nationality`,`political_status`,`education_level`,`birthday`,`regional`,`school_roll`) VALUES ('肖','A1521','20150202232','信息与计算科学','男','312313123',NULL,NULL,NULL,NULL,NULL)
+
+[ 2017-11-12T11:44:05+08:00 ] 127.0.0.1 /Student/index.php/Home/Zaixiaosheng/impUser.html
+ERR: 1048:Column 'political_status' cannot be null
+ [ SQL语句 ] : INSERT INTO `student` (`class`,`number`,`name`,`sex`,`id_number`,`nationality`,`political_status`,`education_level`,`birthday`,`regional`,`school_roll`) VALUES ('肖','A1521','20150202232','信息与计算科学','男','312313123',NULL,NULL,NULL,NULL,NULL)
+
+[ 2017-11-12T11:44:47+08:00 ] 127.0.0.1 /Student/index.php/Home/Zaixiaosheng/impUser.html
+ERR: 1048:Column 'political_status' cannot be null
+ [ SQL语句 ] : INSERT INTO `student` (`class`,`number`,`name`,`sex`,`id_number`,`nationality`,`political_status`,`education_level`,`birthday`,`regional`,`school_roll`) VALUES ('肖','A1521','20150202232','信息与计算科学','男','312313123',NULL,NULL,NULL,NULL,NULL)
+
+[ 2017-11-12T11:56:09+08:00 ] 127.0.0.1 /Student/index.php/Home/Zaixiaosheng/edit/number/%E6%9D%8E
+ERR: 1054:Unknown column '李' in 'where clause'
+ [ SQL语句 ] : SELECT student.id AS id,student.name AS name,student.class AS class,student.number AS number,student.sex AS sex,student.id_number AS id_number,student.school_roll AS school_roll,student.political_status AS political_status,student.nationality AS nationality,student.education_level AS education_level,student.birthday AS birthday,jiangcheng.school_year AS school_year,jiangcheng.scholar AS scholar,jiangcheng.competition AS competition,jiangcheng.award_level AS award_level,jiangcheng.honorary AS honorary,jiangcheng.punish AS punish,class.professional AS professional,class.name AS t_name,english.level_name AS level_name,english.score AS e_score,computer.score AS score,parent.mother_name AS mother_name,parent.father_name AS father_name,parent.father_unit AS father_unit,parent.mother_unit AS mother_unit,parent.home_tel AS home_tel,parent.home_address AS home_address FROM student student LEFT JOIN jiangcheng jiangcheng ON student.number=jiangcheng.number LEFT JOIN class class ON student.class=class.class LEFT JOIN english english ON student.number=english.number LEFT JOIN computer computer ON student.number=computer.number LEFT JOIN parent parent ON student.number=parent.number WHERE ( student.number=李 ) LIMIT 1  
+
+[ 2017-11-12T11:56:12+08:00 ] 127.0.0.1 /Student/index.php/Home/Zaixiaosheng/edit/number/%E6%9D%8E
+ERR: 1054:Unknown column '李' in 'where clause'
+ [ SQL语句 ] : SELECT student.id AS id,student.name AS name,student.class AS class,student.number AS number,student.sex AS sex,student.id_number AS id_number,student.school_roll AS school_roll,student.political_status AS political_status,student.nationality AS nationality,student.education_level AS education_level,student.birthday AS birthday,jiangcheng.school_year AS school_year,jiangcheng.scholar AS scholar,jiangcheng.competition AS competition,jiangcheng.award_level AS award_level,jiangcheng.honorary AS honorary,jiangcheng.punish AS punish,class.professional AS professional,class.name AS t_name,english.level_name AS level_name,english.score AS e_score,computer.score AS score,parent.mother_name AS mother_name,parent.father_name AS father_name,parent.father_unit AS father_unit,parent.mother_unit AS mother_unit,parent.home_tel AS home_tel,parent.home_address AS home_address FROM student student LEFT JOIN jiangcheng jiangcheng ON student.number=jiangcheng.number LEFT JOIN class class ON student.class=class.class LEFT JOIN english english ON student.number=english.number LEFT JOIN computer computer ON student.number=computer.number LEFT JOIN parent parent ON student.number=parent.number WHERE ( student.number=李 ) LIMIT 1  
+
+[ 2017-11-12T17:02:24+08:00 ] 127.0.0.1 /Student/index.php/Home/Admin/ajax.js
+ERR: 非法操作:ajax.js
+
+[ 2017-11-12T18:12:56+08:00 ] 127.0.0.1 /Student/index.php/Home/Admin/ajax.js
+ERR: 非法操作:ajax.js
+
+[ 2017-11-12T20:31:33+08:00 ] 127.0.0.1 /Student/index.php/Home/Banji/select
+ERR: 非法操作:select
+
+[ 2017-11-12T20:31:34+08:00 ] 127.0.0.1 /Student/index.php/Home/Banji/select
+ERR: 非法操作:select
+

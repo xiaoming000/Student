@@ -1,0 +1,199 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>编辑</title>
+<link href="<?php echo CSS_URL ?>function.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="<?php echo JS_URL ?>getclass.js"></script>
+<style type="text/css" >
+div{width:1001px;margin:100px auto;}
+table {border-collapse:collapse;  }
+input{width:97%;height:35px;border:0px;padding-left:5px;}
+select{height:35px;width:90%;border:0px;}
+</style>
+
+</head>
+<body bgcolor="#E8F5FD">
+ <div class="main" align="center" >
+<form action="__SELF__" method="post">
+  
+<table width="500" border="1" cellspacing="0" cellpadding="0" bgcolor="b5d6e6">
+  <tr align="center" >
+      <td width="15%" height="35">学号</td><td width="" bgcolor="#FFFFFF" ><input type="text" name="number" readonly value="{$info.number}" /></td>
+      <td width="15%">姓名</td> <td width="" bgcolor="#FFFFFF" ><input type="text" name="name" value="{$info.name}" /></td>
+  </tr>
+  
+   <tr>  
+      <td align="center">性别</td>
+      <td bgcolor="#FFFFFF"><select name="sex" >
+                <option value="{$info.sex}" select="select">{$info.sex}</option>
+                <option value="男">男</option>
+                <option value="女">女</option>
+        </select></td>        
+   
+        <td  align="center">学院</td>
+        <td    align="center"><input name="xueyuan" type="text" id="xueyuan" value="{$info.xueyuan}"/></td>
+    </tr>
+    <tr>
+        <td  align="center">班级</td>
+        <td    align="center"><input name="class" type="text" id="class" value="{$info.class}"/></td>
+      
+        <td  align="center">专业</td>
+        <td    align="center"><input name="major" type="text" id="major"  value="{$info.major}"/></td>
+    </tr>
+    <tr> 
+        <td align="center">楼栋</td>
+                <td  bgcolor="#FFFFFF"  class="th"  align="center">
+                <select class="select" id="building" name="building" >
+                   <option value="{$info.building}" select="select" >{$info.building}</option>
+                    <volist name="fang" id="v">
+                        <option  value="{$v.building}">{$v.building}</option>
+                    </volist>     
+                </select>
+                </td>
+        
+        <td align="center">楼层</td>      
+        <td  class="td"  align="center"  bgcolor="#FFFFFF">
+             <select class="select" id="floor" name="floor" 
+             onchange="var buildings=document.getElementById('building').value;getclass('__CONTROLLER__/getdormitory/building/'+buildings,'floor','bnumber')" >
+                <option value="{$info.floor}" select="select" >{$info.floor}</option>
+                
+                 <volist name="fa" id="v">
+                    <option value="{$v.floor}">{$v.floor}</option>
+                </volist>     
+                </select>
+            </td>
+       </tr>
+       <tr>
+        <td align="center">宿舍</td>
+                <td  bgcolor="#FFFFFF"  class="td"  align="center"><select class="select" id="bnumber" name="bnumber">
+                    <option value="{$info.bnumber}" select="select" >{$info.bnumber}</option>
+                </select></td>
+        
+        <td align="center">床位</td>
+        <td  bgcolor="#FFFFFF"  align="center"> <select name="bed" >
+          <option value="{$info.bed}" select="select">{$info.bed}</option>
+            <option value="1床">1床</option>
+            <option value="2床">2床</option>
+            <option value="3床">3床</option>
+            <option value="4床">4床</option>
+            <option value="5床">5床</option>
+            <option value="6床">6床</option>
+            </select>
+      </td>
+    
+        
+        
+       </tr>
+     
+ </table>
+ <p align="center" style="margin:10px;">
+        <input type="submit" name="submit" style="width:80px;height:35px;font-size:18px;background:#b5d6e6;"  value="确认"/>&ensp;&ensp;
+        <input type="button" name="reset" style="width:80px;height:35px;font-size:18px;background:#b5d6e6;" onclick="history.go(-1)" value="返回"/> 
+</p>
+  </form>
+</div>
+</body>
+</html>
+
+
+
+<!--<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+<title>编辑班级信息</title>
+<link href="<?php echo CSS_URL ?>function.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="<?php echo JS_URL ?>function.js"></script>
+<style>
+div{width:1001px;margin:100px auto;}
+table {border-collapse:collapse;  }
+input{width:100%;height:35px;border:0px;text-align:center;}
+select{height:35px;width:90%;border:0px;}
+</style>
+</head>
+<body >
+<div class="main" align="center">
+<form action="__SELF__" method="post">
+<input type="hidden" name="id" value="{$info.id}" />  
+
+<table width="500" border="1" cellspacing="0" cellpadding="0" bgcolor="b5d6e6">
+  <tr align="center" >
+      <td width="15%" height="35">学号</td>
+      <td width="" bgcolor="#FFFFFF" ><input type="text" name="number" readonly value="{$info.number}" /></td>
+      <td width="15%">姓名</td>
+      <td width="" bgcolor="#FFFFFF" ><input type="text" name="name" value="{$info.name}" /></td>
+  </tr>
+  <tr align="center" >
+      <td  height="35">性别</td>
+      <td  bgcolor="#FFFFFF"><select name="sex">
+                <option value="{$info.sex}" select="select" style="height:35px;width:100%;">{$info.sex}</option>
+                <option value="男">男</option>
+                <option value="女">女</option></select></td>        
+      <td >学院</td>
+      <td  bgcolor="#FFFFFF" ><input type="text" name="xueyuan" value="{$info.xueyuan}" /></td>
+  </tr>
+  <tr align="center" >
+      <td  height="35">班级</td>
+      <td  bgcolor="#FFFFFF" ><input type="text" name="class" value="{$info.class}" /></td>
+      <td >专业</td>
+      <td  bgcolor="#FFFFFF" ><input type="text" name="major" value="{$info.major}" /></td>
+  </tr>
+  <tr align="center" >
+      <td  height="35">楼栋</td>
+      <td bgcolor="#FFFFFF"><select class="select" id="building" name="building" >
+                   <option value="{$info.building}" select="select" style="height:35px;width:100%;">{$info.building}</option>
+                    <volist name="fang" id="v">
+                        <option  value="{$v.building}">{$v.building}</option>
+                    </volist>     
+                </select>
+      </td>
+      <td >楼层</td>
+      <td  bgcolor="#FFFFFF"><select class="select" id="floor" name="floor" onchange="var buildings=document.getElementById('building').value;getclass('__CONTROLLER__/getdormitory/building/'+buildings,'floor','bnumber')" >
+              <option value="{$info.floor}" select="select" style="box-sizing: border-box;height:46px;width:100%;"  maxlength="20">{$info.floor}</option>
+              <volist name="fa" id="v">
+                    <option value="{$v.floor}">{$v.floor}</option>
+              </volist>     
+           </select>
+      </td>
+  </tr>
+  <tr align="center" >
+      <td  height="35">宿舍</td>
+      <td bgcolor="#FFFFFF"><select class="select" id="bnumber" name="bnumber" >
+                    <option value="{$info.bnumber}" select="select">{$info.bnumber}</option>
+                </select>
+      </td> 
+      <td >床位</td>
+      <td bgcolor="#FFFFFF">
+        <select name="bed">
+          <option value="{$info.bed}" select="select" style="height:35px;width:100%;">{$info.bed}</option>
+            <option value="1床">1床</option>
+            <option value="2床">2床</option>
+            <option value="3床">3床</option>
+            <option value="4床">4床</option>
+            <option value="5床">5床</option>
+            <option value="6床">6床</option>
+         </select>
+      </td>
+  </tr>
+</table>
+
+
+ <p align="center" style="margin:10px;">
+        <input type="submit" name="submit" style="width:80px;height:35px;font-size:18px;background:#b5d6e6;"  value="确认"/>&ensp;&ensp;
+        <input type="button" name="reset" style="width:80px;height:35px;font-size:18px;background:#b5d6e6;" onclick="history.go(-1)" value="返回"/> 
+</p>
+    
+</form>
+ <p style="margin-left:300px"> 说明：1、班级的输入格式为A/B+4个数字，A表示本科，B表示专科；例如：A1421.</p>
+ <p style="margin-left:350px">2、出生日期的输入格式为0000-00-00</p>
+</div>
+</body>
+</html>-->
+
+
+
+
+
+

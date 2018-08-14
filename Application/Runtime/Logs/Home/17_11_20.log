@@ -1,0 +1,62 @@
+[ 2017-11-20T12:35:59+08:00 ] 127.0.0.1 /Student/index.php/Home/Evaluation/delete/id/
+ERR: 参数错误或者未定义:id
+
+[ 2017-11-20T12:42:47+08:00 ] 127.0.0.1 /Student/index.php/Home/evaluation/evaluation
+ERR: 1054:Unknown column 'evalution.id' in 'field list'
+ [ SQL语句 ] : SELECT evalution.id as id,student.number as number,student.name as name,student.class,evaluation.credit,evaluation.avrscore,evaluation.sum_score,evaluation.test,evaluation.pe,evaluation.pe_test,evaluation.morality,evaluation.mora_test,evaluation.skill,evaluation.com_test FROM `evaluation` LEFT JOIN student ON evaluation.number = student.number  ORDER BY student.number LIMIT 0,10  
+
+[ 2017-11-20T12:45:14+08:00 ] 127.0.0.1 /Student/index.php/Home/evaluation/evaluation
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'evaluation ON student.number = evaluation.number  LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `student` RIGHTJOIN evaluation ON student.number = evaluation.number  LIMIT 1  
+
+[ 2017-11-20T12:45:57+08:00 ] 127.0.0.1 /Student/index.php/Home/evaluation/evaluation
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'evaluation ON evaluation.number  = student.number  LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `student` RIGHTJOIN evaluation ON evaluation.number  = student.number  LIMIT 1  
+
+[ 2017-11-20T12:45:59+08:00 ] 127.0.0.1 /Student/index.php/Home/evaluation/evaluation
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'evaluation ON evaluation.number  = student.number  LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `student` RIGHTJOIN evaluation ON evaluation.number  = student.number  LIMIT 1  
+
+[ 2017-11-20T12:51:17+08:00 ] 127.0.0.1 /Student/index.php/Home/Evaluation/excel
+ERR: 模板不存在:./Application/Home/View/Evaluation/excel.html
+
+[ 2017-11-20T12:51:41+08:00 ] 127.0.0.1 /Student/index.php/Home/Evaluation/excel
+ERR: 模板不存在:./Application/Home/View/Evaluation/excel.html
+
+[ 2017-11-20T15:45:21+08:00 ] 127.0.0.1 /Student/index.php/Home/Banji/delete
+ERR: 非法操作:delete
+
+[ 2017-11-20T16:43:01+08:00 ] 127.0.0.1 /Student/index.php/Home/Sushe/edit/number/20150202231
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `fangyuan` WHERE ( building=5 and bnumber= ) 
+
+[ 2017-11-20T17:10:15+08:00 ] 127.0.0.1 /Student/index.php/Home/Sushe/expUser?building=5&floor=0&bnumber_out=0&grade=0&class=0&number=
+ERR: 非法操作:expUser
+
+[ 2017-11-20T17:10:39+08:00 ] 127.0.0.1 /Student/index.php/Home/Sushe/expUser?building=5&floor=0&bnumber_out=0&grade=0&class=0&number=
+ERR: 非法操作:expUser
+
+[ 2017-11-20T17:11:10+08:00 ] 127.0.0.1 /Student/index.php/Home/Sushe/expUser?building=0&floor=0&bnumber_out=0&grade=0&class=0&number=
+ERR: 非法操作:expUser
+
+[ 2017-11-20T17:11:56+08:00 ] 127.0.0.1 /Student/index.php/Home/Sushe/expUser?building=5&floor=0&bnumber_out=0&grade=0&class=0&number=
+ERR: 非法操作:expUser
+
+[ 2017-11-20T17:15:12+08:00 ] 127.0.0.1 /Student/index.php/Home/Sushe/expUser?building=0&floor=0&bnumber_out=0&grade=0&class=0&number=
+ERR: 非法操作:expUser
+
+[ 2017-11-20T17:15:17+08:00 ] 127.0.0.1 /Student/index.php/Home/Sushe/expUser?building=0&floor=0&bnumber_out=0&grade=0&class=0&number=
+ERR: 非法操作:expUser
+
+[ 2017-11-20T19:24:25+08:00 ] 127.0.0.1 /Student/index.php/Home/Admin/ajax.js
+ERR: 非法操作:ajax.js
+
+[ 2017-11-20T19:24:26+08:00 ] 127.0.0.1 /Student/index.php/Home/Admin/ajax.js
+ERR: 非法操作:ajax.js
+
+[ 2017-11-20T19:24:27+08:00 ] 127.0.0.1 /Student/index.php/Home/Admin/ajax.js
+ERR: 非法操作:ajax.js
+
+[ 2017-11-20T19:24:29+08:00 ] 127.0.0.1 /Student/index.php/Home/Admin/ajax.js
+ERR: 非法操作:ajax.js
+

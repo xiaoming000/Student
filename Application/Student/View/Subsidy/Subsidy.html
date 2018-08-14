@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+<title>资助信息</title>
+<link href="<?php echo CSS_URL ?>style.css" type="text/css" rel="stylesheet"/><!--小窗口样式-->
+<link href="<?php echo CSS_URL ?>function.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="<?php echo JS_URL ?>tanceng/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="<?php echo JS_URL ?>tanceng/popup_layer.js"></script>
+<script type="text/javascript" src="<?php echo JS_URL ?>function.js"></script>
+<script type="text/javascript" src="<?php echo JS_URL ?>getclass.js"></script>
+<style>
+body{font-size:15px;}
+.right{display:block;float:right; line-height:25px;margin:5px auto 0;}
+.left{display:block;float:left;}
+.search_span{height:30px;background:#87CEEB;line-height:30px;position:block;color:red;}
+.search_input{height:27px;line-height:27px;width:80px;font-color:#fff;border:none;}
+.th{background:#328aa4;height:20px;color:#fff;}
+.select{width:70px;height:27px;background:#fff;border:none;font-color:#fff;}
+</style>
+</head>
+<body>
+ <table  width="100%" border="0" cellspacing="0" cellpadding="0" >
+  <tr>
+    <td height="30" background="<?php echo IMG_URL ?>table/tab_05.gif"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="12" height="30"><img src="<?php echo IMG_URL ?>table/tab_03.gif" width="12" height="30" /></td>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="46%" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="5%"><div align="center"><img src="<?php echo IMG_URL ?>table/tb.gif" width="16" height="16" /></div></td>
+                <td width="95%" class="STYLE1"><span class="STYLE3">你当前的位置</span>：[资助信息]-[资助记录]</td>
+              </tr>
+            </table></td>
+            <td width="54%"><table border="0" align="right" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="60"><table width="87%" border="0" cellpadding="0" cellspacing="0">
+                </table></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+        <td width="16"><img src="<?php echo IMG_URL ?>table/tab_07.gif" width="16" height="30" /></td>
+      </tr>
+    </table></td>
+  </tr>
+  
+  <tr>
+  	<td  colspan="8" width="100%">
+    	
+		
+		<div class="button">
+			<a href="__CONTROLLER__/out" ><div class="del"><span><img src="<?php echo IMG_URL ?>table/export.png"/></span>导出表</div></a>
+		</div>
+
+		
+		<div class="right"> 
+        <form name="form2" id="form2" method="post" action="__CONTROLLER__/search">
+        <table class="table" >
+            <tr>
+                <td  class="th" width="40" align="center" >学年</td>
+                <td  class="td"  align="center"><select class="select" name="school_year">
+					<option value="0" select="select">全部</option>
+                    <option value="{$date}-{$date+1}" select="select">{$date}-{$date+1}</option>
+					<option value="{$date-1}-{$date}" select="select">{$date-1}-{$date}</option>
+					<option value="{$date-2}-{$date-1}" select="select">{$date-2}-{$date-1}</option>
+					<option value="{$date-3}-{$date-2}" select="select">{$date-3}-{$date-2}</option>
+                </select></td>
+
+                <td class="th">
+                	<a href="#" onclick="document.getElementById('form2').submit();"><div class="th">查询</div></a>
+                </td>
+      		</tr>
+        
+        </table>
+        </form>     
+        </div>
+
+    </td>
+  </tr>
+  
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="8" background="<?php echo IMG_URL ?>table/tab_12.gif">&nbsp;</td>
+        <td><table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="b5d6e6" onmouseover="changeto()"  onmouseout="changeback()">
+          <tr>
+            <td width="3%" height="22" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF">
+            	<div align="center">
+              		<input type="checkbox" name="checkbox" value="checkbox" onclick="swapCheck()"/>
+            	</div></td>
+            <td width="3%" height="40" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF"><div align="center"><span class="STYLE1">序号</span></div></td>
+            <td width="10%" height="22" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF"><div align="center"><span class="STYLE1">学号</span></div></td>
+            <td width="10%" height="22" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF"><div align="center"><span class="STYLE1">姓名</span></div></td>
+            <td width="8%" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF"><div align="center"><span class="STYLE1">性别</span></div></td>
+            <td width="14%" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF"><div align="center"><span class="STYLE1">专业</span></div></td>
+			<td width="8%" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF"><div align="center"><span class="STYLE1">班级</span></div></td>
+			<td width="10%" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF"><div align="center"><span class="STYLE1">资助类型</span></div></td>
+			<td width="10%" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF"><div align="center"><span class="STYLE1">资助金额</span></div></td>
+			<td width="10%" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF"><div align="center"><span class="STYLE1">年度</span></div></td>
+          </tr>
+          
+          <volist name="sub" id="vo" key="k" >
+          <tr >
+            <td height="35" bgcolor="#FFFFFF"><div align="center">
+              <input type="checkbox" name="id[]" id="s" value="{$vo.id}" />
+            </div></td>
+            <td height="20" bgcolor="#FFFFFF"><div align="center" class="STYLE1">
+              <div align="center">{$k}</div>
+            </div></td>
+            <td height="20" bgcolor="#FFFFFF"><div align="center"><span >{$vo.stuid}</span></div></td>
+			<td height="20" bgcolor="#FFFFFF"><div align="center"><span >{$vo.name}</span></div></td>
+			<td height="20" bgcolor="#FFFFFF"><div align="center"><span >{$vo.sex}</span></div></td>
+			<td height="20" bgcolor="#FFFFFF"><div align="center"><span >{$vo.professional}</span></div></td>
+			<td height="20" bgcolor="#FFFFFF"><div align="center"><span >{$vo.class}</span></div></td>
+            <td height="20" bgcolor="#FFFFFF"><div align="center"><span >{$vo.type} </span></div></td>
+            <td bgcolor="#FFFFFF"><div align="center"><span >{$vo.money}</span></div></td>
+            <td height="20" bgcolor="#FFFFFF"><div align="center"><span >{$vo.time}</span></div></td>
+          </tr>
+          </volist>
+          
+        </table></td>
+        <td width="8" background="<?php echo IMG_URL ?>table/tab_15.gif">&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+
+</table>
+</body>
+</html>

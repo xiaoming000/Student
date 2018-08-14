@@ -1,0 +1,87 @@
+
+<!--==============================================================
+修改用户密码
+==============================================================-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>修改</title>
+<style type="text/css" >
+table{
+border:1px solid #fff;
+border-collapse: collapse;
+}
+th{background:#328aa4  repeat-x;color:#FFF;font-size:15px}
+
+td{
+	border:1px solid #FFF;
+border-collapse: collapse;
+padding-top:0px;padding-left:0px;padding-bottom:0px;padding-right:0px;
+margin-top:0px;margin-left:0px;margin-bottom:0px;margin-right:0px;
+
+	}
+textarea,input{border:1px solid #AA9FAA;
+	 padding-top:0px;padding-left:0px;padding-bottom:0px;padding-right:0px;
+margin-top:0px;margin-left:0px;margin-bottom:0px;margin-right:0px;
+}
+select{border:none;border-top:0px;border-left:0px;border-bottom:0px;border-right:0px;
+	 padding-top:0px;padding-left:0px;padding-bottom:0px;padding-right:0px;
+margin-top:0px;margin-left:0px;margin-bottom:0px;margin-right:0px;width:200px;height:40px;}
+	</style>
+
+
+</head>
+<body bgcolor="#E8F5FD">
+ <div class="main" align="center" >
+    <form action="__SELF__" method="post">
+   <p><h2 align="center">&ensp;</h2>
+
+   <h3 align="center"></h3>
+   </p>
+   <!--设置一个隐藏域给修改控制器传递id值-->
+   <input type="hidden" name="id" value="{$info.id}" />
+    <table width="320" border="1" cellpadding="0" cellspacing="0">
+            <tr>
+        <th width="122"    class="my_ziti">教职工号</th>
+        <td   width="192"  align="left"><span id="old" style="text-align:left">
+          <input name="number" type="text" id="number"   style="font-size:15px;height:42px;box-sizing: border-box;width:100%;" maxlength="20"
+          value=""/>
+        </span></td>
+      </tr>
+      <tr>
+        <th  class="my_ziti">姓名</th>
+        <td    align="left">
+        	<input name="name" type="text" id="name" style="box-sizing: border-box;height:42px;width:100%;"  maxlength="20" 
+            value="" />
+        </td>
+      </tr>
+      
+      <tr>
+        <th  class="my_ziti">密码</th>
+        <td    align="left"><input name="password" type="text" id="password" style="box-sizing: border-box;height:42px;width:100%;"  maxlength="20" 
+        value=""/></td>
+      </tr>
+ 
+      <tr>
+      	<th  class="my_ziti">权限</th>
+        <td    align="left"><select name="power">
+        	<option value="管理员" select="select" tyle="box-sizing: border-box;height:42px;width:100%;"  maxlength="20">{$info.power}</option>
+        	<option value="管理员">管理员</option>
+            <option value="学生">学生</option>
+            <option value="班主任">班主任</option>
+            <option value="家长">家长</option>
+            <option value="禁止登入">禁止登入</option>
+        </select></td>
+      </tr>
+      
+    </table>
+<p align="center">
+	<input type="submit" name="submit" style="width:110px;height:42px;font-size:18px;"  value="确认"/>&ensp;&ensp;
+	<input type="reset" name="reset" style="width:110px;height:42px;font-size:18px;" value="重置"/> 
+</p>
+  </form>
+</div>
+</body>
+</html>

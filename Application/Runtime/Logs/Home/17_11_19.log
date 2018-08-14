@@ -1,0 +1,123 @@
+[ 2017-11-19T09:30:50+08:00 ] 127.0.0.1 /Student/index.php/Home/Admin/ajax.js
+ERR: 非法操作:ajax.js
+
+[ 2017-11-19T11:04:03+08:00 ] 127.0.0.1 /student/index.php/Home/Banji/add
+ERR: 1062:Duplicate entry 'A1741' for key 'PRIMARY'
+ [ SQL语句 ] : INSERT INTO `class` (`class`,`name`,`professional`,`class_tutor_tel`,`monitor`,`number`,`league_secretary`,`password`,`qqq`,`power`,`monitor_tel`) VALUES ('A1741','茂凯','微电子学','12345678901','崔丝塔娜','20150205','小熊','123456','3432423','班主任','12345678901')
+
+[ 2017-11-19T11:05:14+08:00 ] 127.0.0.1 /student/index.php/Home/Banji/add
+ERR: 1062:Duplicate entry 'A1421' for key 'PRIMARY'
+ [ SQL语句 ] : INSERT INTO `class` (`class`,`name`,`professional`,`class_tutor_tel`,`monitor`,`number`,`league_secretary`,`password`,`qqq`,`power`,`monitor_tel`) VALUES ('A1421',' 让我去二额无若','数学','12345678901','日确认','','嗯嗯','','32131241','','12345678901')
+
+[ 2017-11-19T11:43:39+08:00 ] 127.0.0.1 /student/index.php/Home/Zaixiaosheng/search?grade=3&class=&number=
+ERR: 模板不存在:./Application/Home/View/Zaixiaosheng/teacher.html
+
+[ 2017-11-19T13:59:05+08:00 ] 127.0.0.1 /student/index.php/Home/Banji/search
+ERR: 模板不存在:./Application/Home/View/Banji/teacher.html
+
+[ 2017-11-19T14:36:56+08:00 ] 127.0.0.1 /student/index.php/Home/Admin/ajax.js
+ERR: 非法操作:ajax.js
+
+[ 2017-11-19T14:36:58+08:00 ] 127.0.0.1 /student/index.php/Home/Admin/ajax.js
+ERR: 非法操作:ajax.js
+
+[ 2017-11-19T16:14:01+08:00 ] 127.0.0.1 /student/index.php/Home/Jiangcheng/edit_english/id/
+ERR: 参数错误或者未定义:id
+
+[ 2017-11-19T16:14:05+08:00 ] 127.0.0.1 /student/index.php/Home/Jiangcheng/edit_english/id/
+ERR: 参数错误或者未定义:id
+
+[ 2017-11-19T16:14:09+08:00 ] 127.0.0.1 /student/index.php/Home/Jiangcheng/edit_english/id/
+ERR: 参数错误或者未定义:id
+
+[ 2017-11-19T16:14:29+08:00 ] 127.0.0.1 /student/index.php/Home/Jiangcheng/edit_english/id/
+ERR: 参数错误或者未定义:id
+
+[ 2017-11-19T16:59:48+08:00 ] 127.0.0.1 /student/index.php/Home/Jiangcheng/getclass/g/3
+ERR: 非法操作:getclass
+
+[ 2017-11-19T16:59:54+08:00 ] 127.0.0.1 /student/index.php/Home/Jiangcheng/getclass/g/2
+ERR: 非法操作:getclass
+
+[ 2017-11-19T17:05:47+08:00 ] 127.0.0.1 /student/index.php/Home/Jiangcheng/getclass/g/2
+ERR: 非法操作:getclass
+
+[ 2017-11-19T17:05:50+08:00 ] 127.0.0.1 /student/index.php/Home/Jiangcheng/getclass/g/3
+ERR: 非法操作:getclass
+
+[ 2017-11-19T17:05:53+08:00 ] 127.0.0.1 /student/index.php/Home/Jiangcheng/getclass/g/1
+ERR: 非法操作:getclass
+
+[ 2017-11-19T17:05:55+08:00 ] 127.0.0.1 /student/index.php/Home/Jiangcheng/getclass/g/2
+ERR: 非法操作:getclass
+
+[ 2017-11-19T17:05:59+08:00 ] 127.0.0.1 /student/index.php/Home/Jiangcheng/getclass/g/3
+ERR: 非法操作:getclass
+
+[ 2017-11-19T17:06:25+08:00 ] 127.0.0.1 /student/index.php/Home/Jiangcheng/getclass/g/2
+ERR: 非法操作:getclass
+
+[ 2017-11-19T17:06:27+08:00 ] 127.0.0.1 /student/index.php/Home/Jiangcheng/getclass/g/3
+ERR: 非法操作:getclass
+
+[ 2017-11-19T17:06:30+08:00 ] 127.0.0.1 /student/index.php/Home/Jiangcheng/getclass/g/2
+ERR: 非法操作:getclass
+
+[ 2017-11-19T17:06:32+08:00 ] 127.0.0.1 /student/index.php/Home/Jiangcheng/getclass/g/3
+ERR: 非法操作:getclass
+
+[ 2017-11-19T17:40:56+08:00 ] 127.0.0.1 /student/index.php/Home/Jiangcheng/getclass/g/3
+ERR: 非法操作:getclass
+
+[ 2017-11-19T17:41:01+08:00 ] 127.0.0.1 /student/index.php/Home/Jiangcheng/getclass/g/2
+ERR: 非法操作:getclass
+
+[ 2017-11-19T17:41:05+08:00 ] 127.0.0.1 /student/index.php/Home/Jiangcheng/getclass/g/3
+ERR: 非法操作:getclass
+
+[ 2017-11-19T17:41:07+08:00 ] 127.0.0.1 /student/index.php/Home/Jiangcheng/getclass/g/2
+ERR: 非法操作:getclass
+
+[ 2017-11-19T17:50:12+08:00 ] 127.0.0.1 /student/index.php/Home/Jiangcheng/search?school_year=&semester=&grade=0&class=0&number=20150202213
+ERR: 非法操作:search
+
+[ 2017-11-19T17:50:59+08:00 ] 127.0.0.1 /student/index.php/Home/Jiangcheng/search?school_year=&semester=&grade=3&class=A1512&number=
+ERR: 非法操作:search
+
+[ 2017-11-19T17:51:29+08:00 ] 127.0.0.1 /student/index.php/Home/Jiangcheng/search_computer?school_year=&semester=&grade=0&class=0&number=20150202232
+ERR: 1052:Column 'number' in where clause is ambiguous
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `student` LEFT JOIN computer ON student.number = computer.number  WHERE `number` = '20150202232' LIMIT 1  
+
+[ 2017-11-19T17:52:20+08:00 ] 127.0.0.1 /student/index.php/Home/Jiangcheng/search_computer?school_year=&semester=&grade=0&class=0&number=20150202232
+ERR: 1054:Unknown column 's.number' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `student` LEFT JOIN computer ON student.number = computer.number  WHERE s.number = '20150202232' LIMIT 1  
+
+[ 2017-11-19T17:55:45+08:00 ] 127.0.0.1 /student/index.php/Home/Jiangcheng/search_computer?school_year=2016-2017&semester=&grade=0&class=0&number=
+ERR: 1054:Unknown column 'shcool_year' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `student` LEFT JOIN computer ON student.number = computer.number  WHERE `shcool_year` = '2016-2017' LIMIT 1  
+
+[ 2017-11-19T18:22:49+08:00 ] 127.0.0.1 /student/index.php/Home/Jiangcheng/edit_computer/id/
+ERR: 参数错误或者未定义:id
+
+[ 2017-11-19T18:40:21+08:00 ] 127.0.0.1 /student/index.php/Home/Jiangcheng/search_jiangcheng?school_year=2016-2017&semester=&grade=0&class=0&number=
+ERR: 1052:Column 'school_year' in where clause is ambiguous
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `student` LEFT JOIN jiangcheng ON student.number = jiangcheng.number LEFT JOIN computer ON student.number = computer.number LEFT JOIN english ON student.number = english.number  WHERE `school_year` = '2016-2017' LIMIT 1  
+
+[ 2017-11-19T20:33:07+08:00 ] 127.0.0.1 /student/index.php/Home/Evaluation/search?school_year=&semester=&grade=0&class=0&number=%09+20150202232
+ERR: 模板不存在:./Application/Home/View/Evaluation/evalution.html
+
+[ 2017-11-19T20:34:06+08:00 ] 127.0.0.1 /student/index.php/Home/Evaluation/getclass/g/3
+ERR: 非法操作:getclass
+
+[ 2017-11-19T20:41:07+08:00 ] 127.0.0.1 /student/index.php/Home/Evaluation/student
+ERR: 非法操作:student
+
+[ 2017-11-19T20:48:46+08:00 ] 127.0.0.1 /student/index.php/Home/Evaluation/delete/id/
+ERR: 参数错误或者未定义:id
+
+[ 2017-11-19T20:51:56+08:00 ] 127.0.0.1 /student/index.php/Home/Evaluation/edit/id/
+ERR: 参数错误或者未定义:id
+
+[ 2017-11-19T20:52:07+08:00 ] 127.0.0.1 /student/index.php/Home/Evaluation/edit/id/
+ERR: 参数错误或者未定义:id
+

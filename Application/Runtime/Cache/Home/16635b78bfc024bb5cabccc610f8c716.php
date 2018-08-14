@@ -1,0 +1,158 @@
+<?php if (!defined('THINK_PATH')) exit();?> <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="<?php echo CSS_URL ?>index.css">
+<script type="text/javascript" src="<?php echo JS_URL ?>getclass.js"></script>
+ <script type="text/javascript" src="<?php echo JS_URL ?>base.js"></script>
+<script type="text/javascript" src="<?php echo JS_URL ?>tool.js"></script>
+<script type="text/javascript" src="<?php echo JS_URL ?>base_drag.js"></script>
+<script type="text/javascript" src="<?php echo JS_URL ?>index.js"></script>
+<style>
+body{font-size:15px;}
+.right{display:block;float:right; line-height:25px;margin:5px auto 0;}
+.left{display:block;float:left;}
+.search_span{height:30px;background:#87CEEB;line-height:30px;position:block;color:red;}
+.search_input{height:27px;line-height:27px;width:80px;font-color:#fff;border:none;}
+.th{background:#328aa4;height:20px;color:#fff;}
+.select{width:70px;height:27px;background:#fff;border:none;font-color:#fff;}
+</style>
+</head>
+
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+  <tr>
+    <td height="30" background="<?php echo IMG_URL ?>table/tab_05.gif">
+     <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="12" height="30"><img src="<?php echo IMG_URL ?>table/tab_03.gif" width="12" height="30" /></td>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="46%" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="5%"><div align="center"><img src="<?php echo IMG_URL ?>table/tb.gif" width="16" height="16" /></div></td>
+                <td width="95%" class="STYLE1"><span class="STYLE3">你当前的位置</span>：[宿舍管理]-[房源信息]</td>
+              </tr>
+            </table></td>
+            <td width="54%"><table border="0" align="right" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="60"><table width="87%" border="0" cellpadding="0" cellspacing="0">
+                  
+                </table></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+        <td width="16"><img src="<?php echo IMG_URL ?>table/tab_07.gif" width="16" height="30" /></td>
+      </tr>
+    </table></td>
+  </tr>
+  
+  <tr>
+  	<td  colspan="8" width="100%">
+        <div class="button" ><a href="/Student/index.php/Home/Fangyuan/add" ><div class="tianjia" ><span><img src="<?php echo IMG_URL ?>table/22.gif"/></span>添&nbsp;&nbsp;加</div></a></div>
+        <div class="button" ><a href="#"><div class="del" onclick="test()" ><span><img src="<?php echo IMG_URL ?>table/11.gif"/></span>批量删除</div></a></div>
+        <div class="button"><a href="/Student/index.php/Home/Fangyuan/out" ><div class="del"><span><img src="<?php echo IMG_URL ?>table/export.png"/></span>导出表</div></a></div>
+        <div class="button"><a href="/Student/index.php/Home/Fangyuan/in" ><div class="del"><span><img src="<?php echo IMG_URL ?>table/import.png"/></span>导入表</div></a></div>
+        <div class="right"> 
+            <form name="form2" id="form2" method="get" action="/Student/index.php/Home/Fangyuan/search">
+            <table class="table">
+            <tr>
+                <td  class="th" width="40" align="center" >楼栋</td>
+                <td  class="td"  align="center"> <div class="content">
+                <select class="select" id="building" name="building" >
+                    <option value="0" select="select">选择楼栋</option>
+                    <?php if(is_array($fang)): $i = 0; $__LIST__ = $fang;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><option value="<?php echo ($v["building"]); ?>"><?php echo ($v["building"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>     
+                </select></div></td>
+                <td  class="th" width="40" align="center" >楼层</td>      
+                <td  class="td"  align="center">
+                <select class="select" id="floor" name="floor" onchange="var buildings=document.getElementById('building').value;getclass('/Student/index.php/Home/Fangyuan/getdormitory/building/'+buildings,'floor','bnumber')" >
+                    <option value="0" select="select">选择楼层</option>
+                     <?php if(is_array($fa)): $i = 0; $__LIST__ = $fa;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vl): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vl["floor"]); ?>"><?php echo ($vl["floor"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>     
+                </select></td>
+                <td  class="th" width="40" align="center">宿舍</td>
+                <td  class="td"  align="center"><select class="select" id="bnumber" name="bnumber">
+                    <option value="0" select="select">选择寝室</option>
+                </select></td>		
+                <td class="th"><a href="#" onclick="document.getElementById('form2').submit();"><div class="th">查询</div></a>
+                </td>
+      		</tr>
+        	</table>
+        	</form> 
+         </div>
+        <div class="clear"></div>
+    </td>
+  </tr>
+  
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="8" background="<?php echo IMG_URL ?>table/tab_12.gif">&nbsp;</td>
+        <td><table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="b5d6e6" >
+          <tr>
+            <td width="3%" height="22" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF"><div align="center">
+              <input type="checkbox" name="checkbox" value="checkbox" />
+            	</div></td>
+            <td width="3%" height="40" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF"><div align="center"><span class="STYLE1">序号</span></div></td>
+            <td width="6%" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF"><div align="center"><span class="STYLE1">校区</span></div></td>
+            <td width="6%" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF"><div align="center"><span class="STYLE1">楼栋</span></div></td>
+            <td width="6%" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF"><div align="center"><span class="STYLE1">楼层</span></div></td>
+            <td width="6%" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF"><div align="center"><span class="STYLE1">宿舍</span></div></td>
+            <td width="6%" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF"><div align="center"><span class="STYLE1">性别</span></div></td>
+            <td width="6%" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF"><div align="center"><span class="STYLE1">价格/(元)</span></div></td>
+            <td width="6%" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF"><div align="center"><span class="STYLE1">床位数</span></div></td>
+            <td width="6%" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF"><div align="center"><span class="STYLE1">以住/(人)</span></div></td>
+            <td width="6%" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF"><div align="center"><span class="STYLE1">空床数</span></div></td>
+            <td width="6%" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF"><div align="center"><span class="STYLE1">寝室长</span></div></td>
+            <td width="10%" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF"><div align="center"><span class="STYLE1">寝室长电话</span></div></td>
+            <td colspan="3" width="10%" height="22" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF" class="STYLE1"><div align="center">基本操作</div></td>
+          </tr>
+<form id="form1" name="form1" method="post" action="/Student/index.php/Home/Fangyuan/delete" >
+          <?php if(is_array($f)): $k = 0; $__LIST__ = $f;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($k % 2 );++$k;?><tr style="color:#444;font-size:14px;">
+            <td height="35" bgcolor="#FFFFFF"><div align="center">
+              <input type="checkbox" name="id[]" id="s" value="<?php echo ($vo["id"]); ?>" />
+            </div></td>
+            <td height="20" bgcolor="#FFFFFF"><div align="center" class="STYLE1">
+              <div align="center"><?php echo ($k); ?></div>
+            </div></td>
+            <td bgcolor="#FFFFFF"><div align="center"><span ><?php echo ($vo["school"]); ?></span></div></td>
+            <td bgcolor="#FFFFFF"><div align="center"><span ><?php echo ($vo["building"]); ?></span></div></td>
+            <td bgcolor="#FFFFFF"><div align="center"><span ><?php echo ($vo["floor"]); ?></span></div></td>
+            <td bgcolor="#FFFFFF"><div align="center"><span ><?php echo ($vo["bnumber"]); ?> </span></div></td>
+            <td bgcolor="#FFFFFF"><div align="center"><span ><?php echo ($vo["sex"]); ?></span></div></td>
+            <td bgcolor="#FFFFFF"><div align="center"><span ><?php echo ($vo["price"]); ?></span></div></td>
+            <td bgcolor="#FFFFFF"><div align="center"><span ><?php echo ($vo["max"]); ?></span></div></td>
+            <td bgcolor="#FFFFFF"><div align="center"><span ><?php echo ($vo["now_stu"]); ?></span></div></td>
+            <td bgcolor="#FFFFFF"><div align="center"><span ><?php echo ($vo["countt"]); ?></span></div></td>
+            <td bgcolor="#FFFFFF"><div align="center"><span ><?php echo ($vo["boss"]); ?></span></div></td>
+            <td bgcolor="#FFFFFF"><div align="center"><span ><?php echo ($vo["telnumber"]); ?></span></div></td>
+            
+            <td bgcolor="#FFFFFF"><div align="center"><span ><img src="<?php echo IMG_URL ?>table/edt.gif" width="16" height="16" /><a href="/Student/index.php/Home/Fangyuan/edit/id/<?php echo ($vo["id"]); ?>">编辑</a></span></div></td>
+            <td height="20" bgcolor="#FFFFFF"><div align="center" ><span ><img src="<?php echo IMG_URL ?>table/del.gif" width="16" height="16" />
+                <a href="#" class="del1"  del_href="/Student/index.php/Home/Fangyuan/del/id/<?php echo ($vo["id"]); ?>">删除</a></span></div></td>
+          </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+          
+          </form>
+        </table></td>
+<!--        <td width="8" background="<?php echo IMG_URL ?>table/tab_15.gif">&nbsp;</td>-->
+      </tr>
+    </table></td>
+  </tr>
+</table>
+
+<div class="list-page" ><?php echo ($page); ?></div>
+<!--====================================== 删除DIV ============================================ -->
+
+<div id="delete2">
+	<h2><img src="<?php echo IMG_URL ?>images/close.png" alt="" class="close" />是否确定删除！</h2>
+	<form name="login">
+	<div class="info"></div>
+    <div style="padding:35px 50px;">
+        <input type="button" class="sub" name="sub" style="width:110px;height:42px;font-size:18px;"  value="确认"/>&ensp;&ensp;
+        <input type="button" class="reset" name="reset" style="width:110px;height:42px;font-size:18px;" value="取消"/>
+    </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<?php
+	namespace Model;
+	use Think\Model;
+	use Think\Model\ViewModel;
+	class SubsidyViewModel extends ViewModel{   
+		 public $viewFields = array(    
+			 'Subsidy'=>array('id','stuid','type','money','time'),    
+			 'student'=>array('name','sex','class', '_on'=>'Subsidy.stuid=student.number'), 'class'=>array('professional', '_on'=>'student.class=class.class'), 
+		);
+
+		 //添加验证
+		 protected $patchValidate = true;
+		  protected $_validate = array(     
+			  array('stuid','require','必须填学号'), //默认情况下用正则进行验证 
+			  array('grade','require','必须填类型'),
+			  array('state','require','必须填类型'),
+			  array('in_time','require','必须填类型')
+				  
+			  );
+		
+	}
+	

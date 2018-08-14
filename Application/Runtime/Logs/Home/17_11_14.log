@@ -1,0 +1,7 @@
+[ 2017-11-14T10:19:15+08:00 ] 127.0.0.1 /Student/index.php/Home/Banji/search
+ERR: æ¨¡æ¿ä¸å­˜åœ¨:./Application/Home/View/Banji/select.html
+
+[ 2017-11-14T11:06:45+08:00 ] 127.0.0.1 /Student/index.php/Home/Index/index
+ERR: SQLSTATE[HY000] [2002] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ı¼«¾Ü¾ø£¬ÎŞ·¨Á¬½Ó¡£
+
+

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+
+a.link,a,hover,a.visited{text-decoration:none;color:#000000;}
+.button a.link,.button a,.button a.visited{text-decoration:none;color:#ffffff;}
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color:#e9f7fc;
+}
+
+body .button{height:40px;font-size:20px;font-weight:100;color:#FFFFFF;	float:left;	}	
+body .button .tianjia{
+	font-size:16px;
+	height:22px;
+	width:64px;
+	margin:5px 12px;
+	padding:3px 13px;
+	background-image:url(<?php echo IMG_URL ?>table/button.jpg);
+
+	}
+body .button .del{
+	font-size:16px;
+	height:22px;
+	width:82px;
+	margin:5px 15px;
+	padding:3px 4px;
+	background-image:url(<?php echo IMG_URL ?>table/button.jpg);
+
+	}	
+	
+.list-page{padding:20px 0;text-align:center;}
+.list-page a{margin:0 5px;padding:2px 7px;border:1px solid #ccc;background:#f3f3f3;}
+.list-page a:hover{background:#e4e4e4;border:1px solid #908f8f;}
+.list-page .current{margin:0 5px;padding:2px 7px;background:#f60;border:1px solid #fe8101;color:#fff;}
+
+
+</style>
+
+<script>
+var  highlightcolor='#c1ebff';
+//此处clickcolor只能用win系统颜色代码才能成功,如果用#xxxxxx的代码就不行,还没搞清楚为什么:(
+var  clickcolor='#51b2f6';
+function  changeto(){
+source=event.srcElement;
+if  (source.tagName=="TR"||source.tagName=="TABLE")
+return;
+while(source.tagName!="TD")
+source=source.parentElement;
+source=source.parentElement;
+cs  =  source.children;
+//alert(cs.length);
+if  (cs[1].style.backgroundColor!=highlightcolor&&source.id!="nc"&&cs[1].style.backgroundColor!=clickcolor)
+for(i=0;i<cs.length;i++){
+	cs[i].style.backgroundColor=highlightcolor;
+}
+}
+
+function  changeback(){
+if  (event.fromElement.contains(event.toElement)||source.contains(event.toElement)||source.id=="nc")
+return
+if  (event.toElement!=source&&cs[1].style.backgroundColor!=clickcolor)
+//source.style.backgroundColor=originalcolor
+for(i=0;i<cs.length;i++){
+	cs[i].style.backgroundColor="";
+}
+}
+
+function  clickto(){
+source=event.srcElement;
+if  (source.tagName=="TR"||source.tagName=="TABLE")
+return;
+while(source.tagName!="TD")
+source=source.parentElement;
+source=source.parentElement;
+cs  =  source.children;
+//alert(cs.length);
+if  (cs[1].style.backgroundColor!=clickcolor&&source.id!="nc")
+for(i=0;i<cs.length;i++){
+	cs[i].style.backgroundColor=clickcolor;
+}
+else
+for(i=0;i<cs.length;i++){
+	cs[i].style.backgroundColor="";
+}
+}
+
+function checkForm() {
+	alert("fdes");
+	//window.alert("确认删除！");
+	//var s = document.getElementById("s");
+	//window.alert("haha");
+
+	
+
+</script>
+<script type="text/jscript">
+function test()
+{
+    document.getElementById("form1").submit();
+}
+
+</script>
+
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="__CONTROLLER__/delete" >
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+  <tr>
+    <td height="30" background="<?php echo IMG_URL ?>table/tab_05.gif"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="12" height="30"><img src="<?php echo IMG_URL ?>table/tab_03.gif" width="12" height="30" /></td>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="46%" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="5%"><div align="center"><img src="<?php echo IMG_URL ?>table/tb.gif" width="16" height="16" /></div></td>
+                <td width="95%" class="STYLE1"><span class="STYLE3">你当前的位置</span>：[账户管理]-[教师账户]</td>
+              </tr>
+            </table></td>
+            <td width="54%"><table border="0" align="right" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="60"><table width="87%" border="0" cellpadding="0" cellspacing="0">
+                  
+                </table></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+        <td width="16"><img src="<?php echo IMG_URL ?>table/tab_07.gif" width="16" height="30" /></td>
+      </tr>
+    </table></td>
+  </tr>
+  
+  <tr>
+  	<td  colspan="8" width="100%">
+    	<div class="button" >
+        
+        	<a href="__CONTROLLER__/add" ><div class="tianjia" ><span><img src="<?php echo IMG_URL ?>table/22.gif"/></span>添&nbsp;&nbsp;加</div></a>
+        
+        </div>
+      
+  
+		<div class="button" >
+        
+        	<a href="#"><div class="del" onclick="test()" ><span><img src="<?php echo IMG_URL ?>table/11.gif"/></span>批量删除</div></a>
+        
+        </div>      
+        
+        <div class="clear"></div>
+
+    </td>
+  	
+  </tr>
+  
+  
+  
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="8" background="<?php echo IMG_URL ?>table/tab_12.gif">&nbsp;</td>
+        <td><table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="b5d6e6" onmouseover="changeto()"  onmouseout="changeback()">
+          <tr>
+            <td width="3%" height="22" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF"><div align="center">
+              <input type="checkbox" name="checkbox" value="checkbox" />
+            </div></td>
+            <td width="3%" height="40" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF"><div align="center"><span class="STYLE1">序号</span></div></td>
+            <td width="12%" height="22" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF"><div align="center"><span class="STYLE1">教职工号</span></div></td>
+            <td width="14%" height="22" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF"><div align="center"><span class="STYLE1">姓名</span></div></td>
+            <td width="18%" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF"><div align="center"><span class="STYLE1">密码</span></div></td>
+            <td width="18%" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF"><div align="center"><span class="STYLE1">权限</span></div></td>
+            <td colspan="3" width="15%" height="22" background="<?php echo IMG_URL ?>table/bg.gif" bgcolor="#FFFFFF" class="STYLE1"><div align="center">基本操作</div></td>
+          </tr>
+          
+          <volist name="list" id="vo" key="k" >
+          
+          <tr >
+            <td height="35" bgcolor="#FFFFFF"><div align="center">
+              <input type="checkbox" name="id[]" id="s" value="{$vo.id}" />
+            </div></td>
+            <td height="20" bgcolor="#FFFFFF"><div align="center" class="STYLE1">
+              <div align="center">{$k}</div>
+            </div></td>
+            <td height="20" bgcolor="#FFFFFF"><div align="center"><span >{$vo.number}</span></div></td>
+            <td height="20" bgcolor="#FFFFFF"><div align="center"><span >{$vo.name} </span></div></td>
+            <td bgcolor="#FFFFFF"><div align="center"><span >{$vo.password}</span></div></td>
+            <td height="20" bgcolor="#FFFFFF"><div align="center"><span >{$vo.power}</span></div></td>
+            <td height="20" bgcolor="#FFFFFF"><div align="center"><span ><img src="<?php echo IMG_URL ?>table/edt.gif" width="16" height="16" />
+            	<a href="__CONTROLLER__/edit/id/{$vo.id}">编辑</a></span></div></td>
+            <td height="20" bgcolor="#FFFFFF"><div align="center"><span ><img src="<?php echo IMG_URL ?>table/del.gif" width="16" height="16" />
+            <a href="__CONTROLLER__/account_del/id/{$vo.id}">删除</a></span></div></td>
+
+          </tr>
+          
+          </volist>
+          
+        </table></td>
+        <td width="8" background="<?php echo IMG_URL ?>table/tab_15.gif">&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+
+</table>
+</form>
+<div class="list-page" >{$pagelist}</div>
+</body>
+</html>
